@@ -1,0 +1,6 @@
+{
+  "name": "Synapse - Grade 12 Textbook Gamified UI",
+  "description": "Tactile, premium Duolingo-style learning UI for Grade 12 textbook curriculum with custom mascot Archie, iPhone motion, and strict color hierarchy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

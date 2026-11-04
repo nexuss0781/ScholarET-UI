@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-parchment: #F4E1D2;
+    --brand-teal: #008080;
+    --brand-teal-dark: #005f5f;
+    --brand-teal-light: #20b2aa;
+    --reward-pumpkin: #FE7F2D;
+    --reward-pumpkin-dark: #d45e12;
+    --reward-pumpkin-light: #ffa15d;
+    --text-charcoal: #233D4D;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-parchment);
+    color: var(--text-charcoal);
+  }
+}
+
+/* 3D Button Depth Styles - Duolingo Signature Tactile Feel */
+.btn-3d-teal {
+  background-color: #008080;
+  box-shadow: 0 4px 0 #005a5a;
+  color: #ffffff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-3d-teal:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #005a5a;
+}
+
+.btn-3d-pumpkin {
+  background-color: #FE7F2D;
+  box-shadow: 0 4px 0 #cf5c15;
+  color: #ffffff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-3d-pumpkin:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #cf5c15;
+}
+
+.btn-3d-white {
+  background-color: #ffffff;
+  box-shadow: 0 3px 0 #d9c4b3;
+  color: #233D4D;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-3d-white:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #d9c4b3;
+}
+
+.btn-3d-node-teal {
+  background-color: #008080;
+  box-shadow: 0 8px 0 #005a5a;
+  transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease;
+}
+
+.btn-3d-node-teal:active {
+  transform: translateY(6px);
+  box-shadow: 0 2px 0 #005a5a;
+}
+
+.btn-3d-node-gold {
+  background: linear-gradient(180deg, #ffc93c 0%, #f4af1b 100%);
+  box-shadow: 0 8px 0 #c28200;
+  transition: transform 0.12s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.12s ease;
+}
+
+.btn-3d-node-gold:active {
+  transform: translateY(6px);
+  box-shadow: 0 2px 0 #c28200;
+}
+
+.btn-3d-token {
+  background-color: #ffffff;
+  border: 2px solid #e2cbba;
+  box-shadow: 0 3px 0 #d1b8a5;
+  color: #233D4D;
+  transition: all 0.12s ease;
+}
+
+.btn-3d-token:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #d1b8a5;
+}
+
+/* Skeleton Loading Shimmer */
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(226, 203, 186, 0.45) 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(226, 203, 186, 0.45) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite ease-in-out;
+}
+
+.skeleton-shimmer-teal {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 128, 128, 0.12) 0%,
+    rgba(0, 128, 128, 0.28) 50%,
+    rgba(0, 128, 128, 0.12) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes mascotWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 2s ease-in-out infinite;
+}
+
+.animate-mascot-wiggle {
+  animation: mascotWiggle 1.5s ease-in-out infinite;
+}
+
+/* Hide scrollbars but keep touch/mouse scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
