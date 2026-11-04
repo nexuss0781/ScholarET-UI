@@ -23,8 +23,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('path');
   const [activeSubject, setActiveSubject] = useState<string>('calc');
 
-  // Sidebar Collapse State (Collapsible at bottom toggle, requested in prompt)
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(false);
+  // Sidebar Collapse State (Collapsed by default on desktop)
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(true);
 
   // Gamification Metrics (Matching Grade 12 Textbook Curriculum)
   const [streak, setStreak] = useState<number>(2514);
